@@ -16,18 +16,28 @@ The dockerfiles use some ARGs and you can change these ARGs' value during buildi
 
 ***Warnings: Be Careful to use the ARG values! It's on YOU to check the correction of the ARG values or you will fail to build docker-images.***
 
-## How to use?
+## How to build your docker images?
 Use *image-debian-node.dockerfile* in following examples.
 ```shell
 docker build -t {yourid/imagename:tag} -f image-debian-node .
 ```
 
 Or
-```
+```shell
 docker build --build-arg OS_TAG=jessie -t {yourid/imagename:tag} -f image-debian-node .
 ```
 
 Or
-```
+```shell
 docker build --build-arg NODE_VERSION=v10.13.0 -t {yourid/imagename:tag} -f image-debian-node .
+```
+
+## How to test your images?
+1. Run the container
+```shell
+docker run -it --rm {your-docker-image}
+```
+2. Run the command(in the running container shell)
+```shell
+node -v
 ```
