@@ -33,11 +33,11 @@ docker build --build-arg NODE_VERSION=v10.13.0 -t {yourid/imagename:tag} -f imag
 ```
 
 ## How to test your images?
-1. Run the container
+- Run the container
 ```shell
 docker run -it --rm {your-docker-image}
 ```
-2. Run the command(in the running container shell)
+- Run the command(in the running container shell)
 ```shell
 node -v
 ```
