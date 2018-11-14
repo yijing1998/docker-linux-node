@@ -7,11 +7,11 @@ image-*{osname}*-node.dockerfile
 *{osname}*: which linux distribution the dockerfile uses.
 
 ## Dockerfile args
-The dockerfiles use some ARGs and you can change these ARGs' value at building time using the command like this: `docker build --build-arg arg1=value1 arg2=value2 ...`
+The dockerfiles use some ARGs and you can change these ARGs' value during building time using the command like this: `docker build --build-arg arg1=value1 arg2=value2 ...`
 ARG Name | Default Value | Comments
---- | --- | ---
-OS_TAG | latest | Available OS docker-image tags from [store.docker.com](store.docker.com)
-NODE_VERSION | v11.1.0 | Available nodejs versions from `nvm ls-remote` (run the command on your PC with nvm installed)
+|---|---|---|
+| OS_TAG | latest | Available OS docker-image tags from [store.docker.com](store.docker.com) |
+| NODE_VERSION | v11.1.0 | Available nodejs versions from `nvm ls-remote` (run the command on your PC with nvm installed) |
 
 ***Warnings: Be Careful to use the ARG values! It's on YOU to check the correction of the ARG values or you will fail to build docker-images.***
 
